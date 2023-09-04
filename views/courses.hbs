@@ -1,0 +1,46 @@
+<h1>courses</h1>
+
+{{!-- console.log({{courses.length}}) --}}
+
+{{!-- console.log({{courses}}) --}}
+
+{{!-- 
+{{#if courses.length}}
+<pre>{{courses}}</pre>
+
+{{else}}
+<pre>NETU NI HRENA </pre>
+
+{{/if}}  --}}
+
+
+{{#if courses.length}}
+
+
+{{#each courses}}
+
+  <div class="row">
+    <div class="col s2 offset-s1">
+      <div class="card">
+        <div class="card-image">
+          <img src= "{{img}}" alt="{{title}}">
+        </div>
+        <div class="card-content">
+          <span class="card-title">{{title}}</span>
+          <p class ="price"> {{price}}</p>
+        </div>
+        <div class="card-action">
+          <a href="/courses/{{id}}">Open a course </a>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+ 
+{{/each }}
+{{else}}<p> no courses so far</p>
+
+{{/if}} 
+
+
+ 
